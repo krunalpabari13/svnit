@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import Map,{Marker} from "react-map-gl"
+import Details from './Details'
 export default function MapBox() {
   return (
     <>
@@ -17,7 +18,8 @@ export default function MapBox() {
         <Marker longitude={72.8300} latitude={21.1500}></Marker>
  
     </Map> 
-    <button className="btn  btn-rounded btn-outline-success mt-8" style={{marginLeft:'45%'}} >Use My Current Location</button>
+    <button className="btn  btn-rounded btn-outline-success mt-8" style={{marginLeft:'45%'}} >Book The Charge</button>
+    <Details className="mt-4"></Details>
     </>
     )
 }

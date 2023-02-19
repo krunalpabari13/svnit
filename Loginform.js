@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.css'
+import { Link } from 'react-router-dom'
 export default function Loginform() {
     const registration=()=>
     {   
@@ -42,7 +43,9 @@ export default function Loginform() {
                 <label htmlFor="check"><span className="icon" /> Keep me Signed in</label>
               </div>
               <div className="group">
+                <Link to={'/Main'}>
                 <input type="submit" className="button" defaultValue="Sign In" name="SubmitButton0" />
+                </Link>
               </div>
             </form>
             <form action method="post">

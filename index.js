@@ -1,28 +1,18 @@
-const express = require('express');
-const app = express();
-const MongoClient = require('mongodb').MongoClient;
-const cors = require('cors');
-const bodyParser = require('body-parser');
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-app.use(cors());
-app.use(bodyParser.json());
 
-const url = "mongodb://localhost:27017/SVNIT";
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
-// app.post('/registration', (req, res) => {
-//   MongoClient.connect(url, function(err, db) {
-//     if (err) throw err;
-//     const dbo = db.db("SVNIT");
-//     const user = req.body; // assuming the request body contains user data
-//     dbo.collection("registration").insertOne(user, function(err, result) {
-//       if (err) throw err;
-//       console.log("User saved to database");
-//       db.close();
-//       res.send("User saved to database");
-//     });
-//   });
-// });
-
-app.listen(5000, () => {
-  console.log("Server is listening on port 5000");
-});
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
